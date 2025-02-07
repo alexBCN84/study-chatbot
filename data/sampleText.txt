@@ -1,0 +1,96 @@
+﻿Programa de 9 Meses para Transición Profesional hacia IA + Desarrollo Web Avanzado
+Programa de Estudio Adaptado para Integrar CS50 AI y TensorFlow Developer Certificate
+Este programa combina una base teórica sólida (CS50 AI de Harvard) con una especialización técnica avanzada (TensorFlow Developer Certificate) junto con los cursos de Udemy para maximizar tu competitividad en roles de inteligencia artificial y desarrollo web. El tiempo estimado es de 8 meses, asegurando un equilibrio entre aprendizaje y aplicación práctica.
+________________
+
+
+Meses 1-2: Fundamentos y Aplicaciones Prácticas Iniciales
+Curso 1: GenAI - Langchain for JavaScript Developers
+* Duración: 4 semanas.
+* Objetivo: Familiarizarte con LangChain, embeddings y Retrieval-Augmented Generation (RAG).
+* Enfoque: Aprende a construir flujos de IA generativa con APIs modernas.
+Curso 2: AI For JavaScript Developers (OpenAI, Embeddings, Vercel AI)
+* Duración: 4 semanas.
+* Objetivo: Desarrollar aplicaciones prácticas utilizando OpenAI y servicios basados en embeddings.
+* Enfoque: Trabaja en proyectos como chatbots avanzados y herramientas de análisis de texto.
+________________
+
+
+Meses 3-5: Fundamentos de Inteligencia Artificial (en paralelo los dos cursos)
+Certificación: CS50's Introduction to Artificial Intelligence with Python (Harvard en edX)
+* Duración: 10-12 semanas.
+* Objetivo: Construir una comprensión sólida de la inteligencia artificial, abarcando:
+   * Algoritmos de búsqueda.
+   * Redes neuronales básicas.
+   * Representación del conocimiento.
+   * Razonamiento probabilístico.
+* Enfoque práctico: Realiza ejercicios y proyectos aplicados en Python.
+* Entrega final: Proyecto completo de IA utilizando conceptos aprendidos.
+Curso 3: The AI Engineer Course: Complete AI Engineer Bootcamp
+* Este curso amplía los fundamentos aprendidos en CS50 y agrega experiencia en MLOps y despliegue.
+* Duración: 4 semanas (puedes hacerlo en paralelo a CS50 durante los últimos 2 meses).
+
+
+________________
+
+
+Meses 6-8: Especialización Técnica Avanzada
+Certificación: TensorFlow Developer Certificate (DeepLearning.AI, Coursera)
+* Duración: 12-16 semanas.
+* Objetivo: Dominar la creación y el entrenamiento de modelos de machine learning utilizando TensorFlow.
+* Enfoque:
+   * Redes neuronales profundas.
+   * Técnicas de computer vision y procesamiento de texto.
+   * Herramientas de despliegue de modelos.
+* Entrega final: Modelo entrenado y desplegado en TensorFlow para un caso de uso práctico.
+Curso 4: Hugging Face - Transformers.js: Free AI Models for JavaScript
+* Duración: 4 semanas.
+* Objetivo: Aprender a usar modelos de Hugging Face en aplicaciones frontend.
+* Enfoque: Integrar modelos de procesamiento de lenguaje natural y visión por computadora en proyectos web.
+________________
+
+
+Mes 9: Consolidación y Portafolio
+Proyectos finales y publicación
+* Duración: 4 semanas.
+* Proyectos sugeridos:
+   1. Chatbot con LangChain y OpenAI: Construye un chatbot interactivo que responda preguntas basadas en documentos PDF.
+   2. Aplicación de predicción con TensorFlow: Crea una aplicación de frontend conectada a un modelo de machine learning.
+   3. Visualización de datos con Hugging Face: Muestra resultados generados por un modelo de Hugging Face en una interfaz interactiva.
+Portafolio:
+* Documenta todos tus proyectos en GitHub.
+* Publica demos en línea utilizando herramientas como Vercel o Netlify.
+________________
+
+
+Orden de Trabajo Semanal
+El programa sigue un ritmo de 10-15 horas por semana.
+Mes
+	Curso / Actividad
+	Enfoque Principal
+	1-2
+	LangChain y OpenAI (Udemy)
+	Aplicaciones prácticas iniciales
+	3-5
+	CS50 AI (Harvard - edX)
+	Fundamentos sólidos de IA
+	6-7
+	TensorFlow Developer Certificate (Coursera)
+	Especialización en deep learning
+	8
+	Hugging Face (Udemy)
+	Modelos avanzados para JavaScript
+	9
+	Proyectos finales y portafolio
+	Consolidación y publicación
+	________________
+
+
+Beneficios de este Programa
+1. Certificaciones Académicas Reconocidas:
+   * CS50 AI de Harvard y TensorFlow Developer Certificate de Coursera son credenciales destacadas en el mercado laboral.
+2. Habilidades prácticas demostrables:
+   * Proyectos tangibles que puedes mostrar a futuros empleadores.
+3. Experiencia en herramientas modernas:
+   * Dominio de TensorFlow, LangChain, OpenAI y Hugging Face.
+Este plan asegura que logres una transición efectiva hacia roles avanzados en desarrollo web con inteligencia artificial, equilibrando certificaciones académicas y experiencia práctica.
