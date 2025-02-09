@@ -10,9 +10,18 @@ dotenv.config();
 
 const PINECONE_API_KEY = process.env.PINECONE_API_KEY;
 const PINECONE_INDEX = process.env.PINECONE_INDEX;
+const EMBEDDING_LLM_MODEL = process.env.EMBEDDING_LLM_MODEL;
 
-if (!PINECONE_API_KEY || !PINECONE_INDEX) {
-    throw new Error("Missing Pinecone API Key or Index. Check your .env file.");
+if (!PINECONE_API_KEY) {
+    throw new Error("Missing Pinecone API. Check your .env file.");
+}
+
+if (!PINECONE_INDEX) {
+    throw new Error("Missing Pinecone key Index. Check your. env file. ");
+}
+
+if (!EMBEDDING_LLM_MODEL) {
+    throw new Error("Missing Embedding LLM model. Check your. env file. ");
 }
 
 const pinecone = new Pinecone({ apiKey: PINECONE_API_KEY });
@@ -23,7 +32,7 @@ const progressBar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_cla
 export async function embedAndStore(chunkedDocuments: Document<Record<string, any>>[]) {
 
     // create a new instance from embedding LLM 
-    const embeddingsLLM = new OpenAIEmbeddings({model: "text-embedding-3-small"})
+    const embeddingsLLM = new OpenAIEmbeddings({model: EMBEDDING_LLM_MODEL})
 
     console.log("Starting vectorization");
     progressBar.start(chunkedDocuments.length, 0);

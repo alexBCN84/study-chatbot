@@ -8,6 +8,7 @@ import { loadDocuments as loadFileDocuments } from "./loaders/documentLoader.ts"
 import { loadDocuments as loadWebDocuments } from "./loaders/webLoader.ts";
 import { chunkDocuments } from "./splitter.ts";
 import { embedAndStore } from "./embedder.ts";
+import { createRetriever } from "./retriever.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,7 +25,16 @@ const documents = await loadWebDocuments("https://refine.dev/blog/react-design-p
 
 // chunk documents
 const documentsChunks = await chunkDocuments(documents);
-embedAndStore(documentsChunks); 
+
+// embed documents and store in database
+// embedAndStore(documentsChunks); 
+
+// retrieve documents
+const retriever = await createRetriever();
+const context = await retriever.invoke("What are the main React Design Patterns");
+
+console.log({context});
+
 
 // TODO
 // indexing process is finished
