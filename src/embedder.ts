@@ -29,12 +29,24 @@ const pineconeIndex = pinecone.Index(PINECONE_INDEX);
 
 const progressBar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
 
-export async function embedAndStore(chunkedDocuments: Document<Record<string, any>>[]) {
+type EmbedOptions = {
+    userID: string
+    projectID: string
+}
+
+export async function embedAndStore(
+    chunkedDocuments: Document<Record<string, any>>[], { 
+        userID,
+        projectID
+    }: EmbedOptions
+) {
+    // Create dynamic namespace
+    const namespace = `user:${userID}_project:${projectID}`;
 
     // create a new instance from embedding LLM 
     const embeddingsLLM = new OpenAIEmbeddings({model: EMBEDDING_LLM_MODEL})
 
-    console.log("Starting vectorization");
+    console.log(`Starting vectorization for namespace: ${namespace}`);
     progressBar.start(chunkedDocuments.length, 0);
 
     // starting vectorisation in batches of 100 chunks
@@ -43,7 +55,11 @@ export async function embedAndStore(chunkedDocuments: Document<Record<string, an
 
         try {
             // vectorise and store in pinecone index
-            await PineconeStore.fromDocuments(batch, embeddingsLLM, { pineconeIndex });
+            await PineconeStore.fromDocuments(batch, embeddingsLLM, { 
+                pineconeIndex,
+                namespace 
+            });
+
             progressBar.increment(batch.length);
         } catch (error) {
             console.error("Error processing batch: ", error);
@@ -51,5 +67,5 @@ export async function embedAndStore(chunkedDocuments: Document<Record<string, an
     }
     
     progressBar.stop();
-    console.log("All chunked documents vectorized and stored in Pinecone");
+    console.log(`All chunked documents vectorized and stored in Pinecone (namespace: ${namespace}).`);
 }

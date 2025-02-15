@@ -24,10 +24,22 @@ if (!EMBEDDING_LLM_MODEL) {
 const pinecone = new Pinecone({ apiKey: PINECONE_API_KEY });
 const pineconeIndex = pinecone.Index(PINECONE_INDEX);
 
-export async function createRetriever() {
+type RetrieverConfigOptions = {
+    userID: string 
+    projectID: string
+}
+
+export async function createRetriever({
+    userID,
+    projectID
+}: RetrieverConfigOptions) {
+    const namespace = `user:${userID}_project:${projectID}`;
     const embeddingLLM = new OpenAIEmbeddings({model: EMBEDDING_LLM_MODEL});
     
-    const vectorStore = await PineconeStore.fromExistingIndex(embeddingLLM, {pineconeIndex});
+    const vectorStore = await PineconeStore.fromExistingIndex(embeddingLLM, {
+        pineconeIndex,
+        namespace
+    });
 
     return vectorStore.asRetriever();
 }
